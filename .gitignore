@@ -3,3 +3,7 @@ dist/
 .DS_Store
 *.log
 .npm-cache/
+
+# 本地留档，不进入版本库：设计文档与工作记录
+docs/superpowers/
+docs/records/

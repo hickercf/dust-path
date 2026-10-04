@@ -6,12 +6,16 @@
 
 Node.js 20.19+ 或 22.12+。
 
+Windows 下可直接双击 **启动游戏.cmd**：它会检查依赖、启动服务并自动打开浏览器。首次运行会自动安装依赖。
+
+或在命令行中：
+
 ```powershell
 npm.cmd install --cache .npm-cache
-npm.cmd run dev
+npm.cmd start
 ```
 
-打开 http://127.0.0.1:5173/。
+`npm.cmd start` 与双击脚本等价，会启动服务并自动打开浏览器。若不希望自动打开，改用 `npm.cmd run dev`，再手动访问 http://127.0.0.1:5173/。
 
 ```powershell
 npm.cmd test
@@ -43,6 +47,10 @@ npm.cmd run build
 
 左键点地自动寻路；触屏有摇杆和动作按钮。左下角显示接收的按键与动作。
 
+## 参与开发
+
+`main` 是集成分支，改动请开短命分支并附测试。完整约定见 **CONTRIBUTING.md**。
+
 ## 剧情记录
 
 独立文档：**游戏剧情与发展路线.md**。包含世界观、人物、门派、首章分支与后果，以及后续版本方向；明确区分已实装和计划内容。
@@ -59,3 +67,7 @@ npm.cmd run build
 - `tests/`：六条道路的剧情组合、成长循环、存档与地图可达性测试。
 
 每五秒及重要进展自动保存，可在设置中手动保存。修仙使用 `dust-path-save-v1`，旧版 `moss-ember-save-v1` 保留。继续游玩应使用相同浏览器与地址。
+
+## 授权状态
+
+本仓库是 [hickercf/dust-path](https://github.com/hickercf/dust-path) 的衍生 fork。上游未声明许可证，按默认规则保留所有权利；本仓库同样不对继承代码重新授权，故不附带 `LICENSE` 文件。
